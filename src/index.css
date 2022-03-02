@@ -1,3 +1,12 @@
+/* Global Styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +14,113 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  max-width: 768px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 1em;
+}
+
+/* Site Header  */
+header{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+/* Form Styles */
+form{
+  border: 1px solid black;
+  padding: 1em;
+  background-color: white;
+}
+
+label, button{
+  display: block;
+  margin-top: 1em;
+  font-size: 1.4rem;
+}
+
+input{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid black;
+}
+
+input:focus{
+  border: 2px solid blueviolet;
+}
+
+button{
+  font-family: inherit;
+  padding: 0.6em 1em;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.2rem;
+}
+
+form, input, button{
+  border-radius: 4px;
+}
+
+/* Modal Styles */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.452);
+}
+
+.modal{
+  position: relative;
+  max-width: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 5em;
+  background-color: white ;
+  padding: 0.6em 0.9em;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* Animation Code  */
+  animation-name: animate;
+  animation-duration: 0.3s;
+}
+
+@keyframes animate {
+  from {
+    top: -400px;
+  }
+  
+  to {
+    top: 0px;
+  }
+}
+
+/* Entries Styling */
+
+.entries{
+  padding: 1em;
+  border: 1px solid black;
+  margin-top: 20px;
+  background-color: white;
+
+}
+
+.entry{
+  padding: 0.7em 0.9em;
+  border: 1px solid black;
+}
+
+.entries, .entry{
+  border-radius: 4px;
 }
